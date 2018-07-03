@@ -6,13 +6,11 @@
     box-sizing: border-box
 body
     font-family: 'Roboto', sans-serif
+    background-color: #edf0f1
 
 header
     width: 100%
     height: auto
-    position: fixed
-    top: 0
-    left: 0
     z-index: 5
     background: #25b99a
     border-bottom-right-radius: 10px
@@ -52,6 +50,7 @@ header
         outline: none
         z-index: 2
         cursor: pointer
+        background-color: white
 
         svg
             width: 16px
@@ -63,3 +62,69 @@ header
 
             .fill
                 fill: #25b99a
+
+ul.todo 
+    padding: 10px
+    width: 100%
+    
+    li
+        background-color: white
+        width: 100%
+        padding: 10px
+        margin: 10px 0 
+        list-style-type: none
+        border-radius: 5px
+        word-wrap: normal
+        box-shadow: 0px 1px 2px rgba(44,62,88,0.10)
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .buttons 
+            display: flex
+
+            .remove svg
+                fill: #c0cecb
+            .remove:hover svg
+                fill: #e85656
+
+            .complete svg
+                fill: #25b99a
+                border: solid 1.5px #25b99a
+                border-radius: 100%
+            .complete:hover svg
+                fill: white
+                background-color: #25b99a   
+
+            button
+                width: 50px
+                padding: 0px
+                background: none
+                border: 0px
+                box-shadow: none
+                outline: none
+                cursor: pointer
+                position: relative
+
+                svg
+                    height: 30px
+
+                &+button:before
+                    content: ''
+                    width: 1px
+                    height: 30px
+                    right: 51px
+                    top: 2px
+                    position: absolute
+                    background-color: #edf0f1
+
+            .complete
+                border: solid -3px #25b99a
+                border-radius: 100%
+
+ul.todo#done li .buttons .complete svg
+    fill: white
+    background-color: #25b99a
+    border: none
+                    
+            

@@ -131,14 +131,12 @@ template {
           box-sizing: border-box; }
 
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background-color: #edf0f1; }
 
 header {
   width: 100%;
   height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 5;
   background: #25b99a;
   border-bottom-right-radius: 10px;
@@ -191,7 +189,8 @@ header {
     border: 0;
     outline: none;
     z-index: 2;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: white; }
     header button svg {
       width: 16px;
       height: 16px;
@@ -201,3 +200,69 @@ header {
       margin: -8px 0 0 -8px; }
       header button svg .fill {
         fill: #25b99a; }
+
+ul.todo {
+  padding: 10px;
+  width: 100%; }
+  ul.todo li {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    list-style-type: none;
+    border-radius: 5px;
+    word-wrap: normal;
+    -webkit-box-shadow: 0px 1px 2px rgba(44, 62, 88, 0.1);
+            box-shadow: 0px 1px 2px rgba(44, 62, 88, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    ul.todo li .buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      ul.todo li .buttons .remove svg {
+        fill: #c0cecb; }
+      ul.todo li .buttons .remove:hover svg {
+        fill: #e85656; }
+      ul.todo li .buttons .complete svg {
+        fill: #25b99a;
+        border: solid 1.5px #25b99a;
+        border-radius: 100%; }
+      ul.todo li .buttons .complete:hover svg {
+        fill: white;
+        background-color: #25b99a; }
+      ul.todo li .buttons button {
+        width: 50px;
+        padding: 0px;
+        background: none;
+        border: 0px;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        outline: none;
+        cursor: pointer;
+        position: relative; }
+        ul.todo li .buttons button svg {
+          height: 30px; }
+        ul.todo li .buttons button + button:before {
+          content: '';
+          width: 1px;
+          height: 30px;
+          right: 51px;
+          top: 2px;
+          position: absolute;
+          background-color: #edf0f1; }
+      ul.todo li .buttons .complete {
+        border: solid -3px #25b99a;
+        border-radius: 100%; }
+
+ul.todo#done li .buttons .complete svg {
+  fill: white;
+  background-color: #25b99a;
+  border: none; }
