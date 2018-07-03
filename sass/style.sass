@@ -122,9 +122,17 @@ ul.todo
                 border: solid -3px #25b99a
                 border-radius: 100%
 
-ul.todo#done li .buttons .complete svg
-    fill: white
-    background-color: #25b99a
-    border: none
+ul.todo#done li 
+    background-color: rgba(255,255,255,0.5)
+    box-shadow: none
+    
+    .buttons 
+        button.complete
+            cursor: auto
+
+        .complete svg
+            fill: white
+            background-color: #25b99a
+            border: none
                     
             
