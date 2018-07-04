@@ -228,13 +228,17 @@ ul.todo {
       display: -ms-flexbox;
       display: flex; }
       ul.todo li .buttons .remove svg {
-        fill: #c0cecb; }
+        fill: #c0cecb;
+        -webkit-transition-duration: .3s;
+                transition-duration: .3s; }
       ul.todo li .buttons .remove:hover svg {
         fill: #e85656; }
       ul.todo li .buttons .complete svg {
         fill: #25b99a;
         border: solid 1.5px #25b99a;
-        border-radius: 100%; }
+        border-radius: 100%;
+        -webkit-transition-duration: .3s;
+                transition-duration: .3s; }
       ul.todo li .buttons .complete:hover svg {
         fill: white;
         background-color: #25b99a; }
@@ -263,12 +267,31 @@ ul.todo {
         border-radius: 100%; }
 
 ul.todo#done li {
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none; }
-  ul.todo#done li .buttons button.complete {
-    cursor: auto; }
+  opacity: 0.6; }
   ul.todo#done li .buttons .complete svg {
     fill: white;
-    background-color: #25b99a;
-    border: none; }
+    background-color: #25b99a; }
+  ul.todo#done li .buttons .complete:hover svg {
+    fill: #25b99a;
+    background-color: transparent;
+    border: solid 1.5px #25b99a;
+    border-radius: 100%; }
+
+ul.todo#done:not(:empty):before {
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  margin: 0 0 0 -75px;
+  content: ''; }
+
+ul.todo {
+  position: relative; }
+
+ul.todo#todo:empty:before {
+  content: 'Add a new activity to the list!';
+  opacity: 0.3;
+  width: 100%;
+  padding: 10px; }
