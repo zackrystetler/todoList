@@ -4,7 +4,9 @@ A simple to-do list created using HTML, SASS, and vanilla javascript. The projec
 
 ## Getting Started
 
-Downlaod .zip and run index.html
+Download zip and run index.html or click here:
+
+http://htmlpreview.github.io/?https://github.com/zackrystetler/todolist/blob/master/index.html
 
 ## Authors
 
